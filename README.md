@@ -15,6 +15,7 @@ The C Program to Get Temperature from DS3231 RTC Module.
 
 ## Usage
 ### Get the DS3231 Temperature
+
     $ ./bin/DS3231_Temperature
 
 ## Installation
