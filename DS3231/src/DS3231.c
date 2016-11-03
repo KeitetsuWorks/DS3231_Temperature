@@ -50,7 +50,6 @@ int DS3231_read_temperature(
         return 1;
     }
 
-
     ret = i2c_read_register(
             fd,
             DS3231_ADDR,
