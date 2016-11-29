@@ -26,9 +26,9 @@ The C Program to Get Temperature from DS3231 RTC Module.
 
 2. Download I2C_Linux
 
-        $ wget https://github.com/KeitetsuWorks/I2C_Linux/archive/master.zip
-        $ unzip master.zip
-        $ mv I2C_Linux-master i2c
+        $ wget https://github.com/KeitetsuWorks/I2C_Linux/archive/0.10.zip
+        $ unzip 0.10.zip
+        $ mv I2C_Linux-0.10 i2c
 
 3. Compile DS3231_Temperature
 
