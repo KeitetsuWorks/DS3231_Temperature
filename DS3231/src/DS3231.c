@@ -41,7 +41,7 @@ int DS3231_read_temperature(
 {
     uint8_t temperature_msb, temperature_lsb;
     int ret;
-    double calc;
+    double temperature_work;
     
     ret = i2c_read_register(
             fd,
@@ -61,13 +61,14 @@ int DS3231_read_temperature(
         return 1;
     }
 
-    calc = (temperature_msb & DS3231_BIT_TEMPERATURE_MSB)
-         + (0.25 * ((temperature_lsb & DS3231_BIT_TEMPERATURE_LSB) >> 6));
+    temperature_work = (
+                (temperature_msb & DS3231_BIT_TEMPERATURE_MSB)
+            +   (0.25 * ((temperature_lsb & DS3231_BIT_TEMPERATURE_LSB) >> 6)));
     if((temperature_msb & DS3231_BIT_TEMPERATURE_SIGN) != 0) {
-        calc *= -1;
+        temperature_work *= -1;
     }
 
-    *temperature = calc;
+    *temperature = temperature_work;
 
     return 0;
 }
