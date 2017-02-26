@@ -30,6 +30,8 @@ void DS3231_close(
         int fd)
 {
     i2c_close_bus(fd);
+
+    return;
 }
 
 
