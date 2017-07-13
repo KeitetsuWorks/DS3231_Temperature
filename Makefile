@@ -20,10 +20,6 @@ INCLUDE      = -I./include -I./i2c/include -I./DS3231/include
 
 DOXYGENDIR   = ./html ./latex
 NOMAKEDIR    = $(DOXYGENDIR) .git%
-SRCDIR       = ./src
-ifeq "$(strip $(SRCDIR))" ""
-	SRCDIR   = .
-endif
 OBJDIR       = ./obj
 ifeq "$(strip $(OBJDIR))" ""
 	OBJDIR   = .
