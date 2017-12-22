@@ -32,13 +32,17 @@ endif
 CALLSRCS     = $(shell find * -name *.c)
 CXXALLSRCS   = $(shell find * -name *.cpp)
 CSRCS        = $(filter-out $(NOMAKEDIR), $(CALLSRCS))
-CXXSRCS      = $(filter-out $(NOMAKEDIR), $(CALLXXSRCS))
+CXXSRCS      = $(filter-out $(NOMAKEDIR), $(CXXALLSRCS))
 SRCS         = $(CSRCS) $(CXXSRCS)
-SRCDIRS      = $(dir $(SRCS))$
+CSRCDIRS     = $(dir $(CSRCS))
+CXXSRCDIRS   = $(dir $(CXXSRCS))
+SRCDIRS      = $(CSRCDIRS) $(CXXSRCDIRS)
 COBJS        = $(addprefix $(OBJDIR)/, $(patsubst %.c, %.o, $(CSRCS)))
 CXXOBJS      = $(addprefix $(OBJDIR)/, $(patsubst %.cpp, %.o, $(CXXSRCS)))
 OBJS         = $(COBJS) $(CXXOBJS)
-OBJDIRS      = $(addprefix $(OBJDIR)/, $(SRCDIRS))
+COBJDIRS     = $(addprefix $(OBJDIR)/, $(CSRCDIRS))
+CXXOBJDIRS   = $(addprefix $(OBJDIR)/, $(CXXSRCDIRS))
+OBJDIRS      = $(COBJDIRS) $(CXXOBJDIRS)
 DEPS         = $(OBJS:.o=.d)
 TARGET       = $(BINDIR)/$(shell basename `readlink -f .`)
 
@@ -48,11 +52,12 @@ $(TARGET): $(OBJS) $(LIBS)
 
 $(OBJDIR)/%.o: %.c
 	-mkdir -p $(OBJDIR)
-	-mkdir -p $(OBJDIRS)
+	-mkdir -p $(COBJDIRS)
 	$(CC) $(CFLAGS) $(INCLUDE) -o $@ -c $<
 
 $(OBJDIR)/%.o: %.cpp
 	-mkdir -p $(OBJDIR)
+	-mkdir -p $(CXXOBJDIRS)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ -c $<
 
 .PHONY: clean all
