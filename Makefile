@@ -18,21 +18,21 @@ LDFLAGS      =
 LIBS         =
 INCLUDE      = -I./include -I./i2c/include -I./DS3231/include
 
-DOXYGENDIR   = ./html ./latex
-NOMAKEDIR    = $(DOXYGENDIR) .git%
-OBJDIR       = ./obj
+DOXYGENDIR   = spec_html
+NOMAKEPATHS  = $(DOXYGENDIR)/% .git%
+OBJDIR       = obj
 ifeq "$(strip $(OBJDIR))" ""
 	OBJDIR = .
 endif
-BINDIR       = ./bin
+BINDIR       = bin
 ifeq "$(strip $(BINDIR))" ""
 	BINDIR = .
 endif
 
-CALLSRCS     = $(shell find * -name *.c)
-CXXALLSRCS   = $(shell find * -name *.cpp)
-CSRCS        = $(filter-out $(NOMAKEDIR), $(CALLSRCS))
-CXXSRCS      = $(filter-out $(NOMAKEDIR), $(CXXALLSRCS))
+CALLSRCS     = $(shell find * -name '*.c')
+CXXALLSRCS   = $(shell find * -name '*.cpp')
+CSRCS        = $(filter-out $(NOMAKEPATHS), $(CALLSRCS))
+CXXSRCS      = $(filter-out $(NOMAKEPATHS), $(CXXALLSRCS))
 SRCS         = $(CSRCS) $(CXXSRCS)
 CSRCDIRS     = $(dir $(CSRCS))
 CXXSRCDIRS   = $(dir $(CXXSRCS))

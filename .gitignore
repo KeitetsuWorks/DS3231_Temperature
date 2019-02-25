@@ -71,7 +71,7 @@ dkms.conf
 
 
 ### DS3231_Temperature ###
-html/
+spec_html/
 latex/
 bin/
 obj/
