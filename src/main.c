@@ -12,7 +12,7 @@
 
 #include "DS3231.h"
 
-#define I2C_BUS     "/dev/i2c-1"    //!< Device File for I2C Bus
+#define I2C_BUS     "/dev/i2c-1"    /**< Device File for I2C Bus */
 
 /**
  * @brief   Main Function

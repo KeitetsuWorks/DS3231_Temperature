@@ -12,28 +12,28 @@
 /**
  * @name    Device Address
  */
-/*! @{ */
-#define DS3231_ADDR                 0x68    /*!< maxim integrated DS3231 */
-/*! @} */
+/** @{ */
+#define DS3231_ADDR                 0x68    /**< maxim integrated DS3231 */
+/** @} */
 
 /**
  * @name    Register Address Map
  */
-/*! @{ */
+/** @{ */
 #define DS3231_TIME                 0x00
 #define DS3231_ALARM1               0x07
 #define DS3231_ALARM2               0x0B
-#define DS3231_CONTROL              0x0E    /*!< Control Register */
-#define DS3231_CONTROL_STATUS       0x0F    /*!< Status Register */
-#define DS3231_AGING                0x10    /*!< Aging Offset Register */
-#define DS3231_TEMPERATURE_MSB      0x11    /*!< Temperature Register (Upper Byte) */
-#define DS3231_TEMPERATURE_LSB      0x12    /*!< Temperature Register (Lower Byte) */
-/*! @} */
+#define DS3231_CONTROL              0x0E    /**< Control Register */
+#define DS3231_CONTROL_STATUS       0x0F    /**< Status Register */
+#define DS3231_AGING                0x10    /**< Aging Offset Register */
+#define DS3231_TEMPERATURE_MSB      0x11    /**< Temperature Register (Upper Byte) */
+#define DS3231_TEMPERATURE_LSB      0x12    /**< Temperature Register (Lower Byte) */
+/** @} */
 
 /**
  *@name     Register Address Offset
  */
-/*! @{ */
+/** @{ */
 #define DS3231_SECONDS              0x00
 #define DS3231_MINUTES              0x01
 #define DS3231_HOURS                0x02
@@ -48,12 +48,12 @@
 #define DS3231_ALARM2_MINUTES       0x00
 #define DS3231_ALARM2_HOURS         0x01
 #define DS3231_ALARM2_DAY_DATE      0x02
-/*! @} */
+/** @} */
 
 /**
  * @name    Register Bit Mask
  */
-/*! @{ */
+/** @{ */
 #define DS3231_BIT_10SECONDS        0x70
 #define DS3231_BIT_SECONDS          0x0F
 #define DS3231_BIT_10MINUTES        0x70
@@ -89,7 +89,7 @@
 #define DS3231_BIT_TEMPERATURE_SIGN 0x80
 #define DS3231_BIT_TEMPERATURE_MSB  0x7F
 #define DS3231_BIT_TEMPERATURE_LSB  0xC0
-/*! @} */
+/** @} */
 
 // プロトタイプ宣言
 /**
