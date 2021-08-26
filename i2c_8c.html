@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DS3231 Temperature Register Access Program: i2c/src/i2c.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DS3231 Temperature Register Access Program
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('i2c_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">i2c.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>I2C Device Register Access Functions  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;sys/ioctl.h&gt;</code><br />
+<code>#include &lt;linux/i2c.h&gt;</code><br />
+<code>#include &lt;linux/i2c-dev.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="i2c_8h_source.html">i2c.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+i2c.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2c_8c__incl.png" border="0" usemap="#ai2c_2src_2i2c_8c" alt=""/></div>
+<map name="ai2c_2src_2i2c_8c" id="ai2c_2src_2i2c_8c">
+<area shape="rect" title="I2C Device Register Access Functions" alt="" coords="435,5,527,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,65,107"/>
+<area shape="rect" title=" " alt="" coords="89,80,152,107"/>
+<area shape="rect" title=" " alt="" coords="177,80,241,107"/>
+<area shape="rect" title=" " alt="" coords="265,80,331,107"/>
+<area shape="rect" title=" " alt="" coords="356,80,413,107"/>
+<area shape="rect" title=" " alt="" coords="437,80,524,107"/>
+<area shape="rect" title=" " alt="" coords="548,80,627,107"/>
+<area shape="rect" title=" " alt="" coords="651,80,731,107"/>
+<area shape="rect" title=" " alt="" coords="756,80,835,107"/>
+<area shape="rect" title=" " alt="" coords="859,80,963,107"/>
+<area shape="rect" href="i2c_8h.html" title="I2C Device Register Access Functions" alt="" coords="988,80,1037,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a6d06736ee4058355cd193d0ebb683652"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8c.html#a6d06736ee4058355cd193d0ebb683652">i2c_open_bus</a> (char *i2c_bus)</td></tr>
+<tr class="memdesc:a6d06736ee4058355cd193d0ebb683652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open Function for I2C Bus  <a href="i2c_8c.html#a6d06736ee4058355cd193d0ebb683652">[詳解]</a><br /></td></tr>
+<tr class="separator:a6d06736ee4058355cd193d0ebb683652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2701d0b05bda5e1d1496019048afc37d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8c.html#a2701d0b05bda5e1d1496019048afc37d">i2c_close_bus</a> (int fd)</td></tr>
+<tr class="memdesc:a2701d0b05bda5e1d1496019048afc37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close Function for I2C Bus  <a href="i2c_8c.html#a2701d0b05bda5e1d1496019048afc37d">[詳解]</a><br /></td></tr>
+<tr class="separator:a2701d0b05bda5e1d1496019048afc37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e213a817d36d9dcf1ea086d37874f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8c.html#a79e213a817d36d9dcf1ea086d37874f9">i2c_read_register</a> (int fd, uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data)</td></tr>
+<tr class="memdesc:a79e213a817d36d9dcf1ea086d37874f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read Data from I2C Device Register  <a href="i2c_8c.html#a79e213a817d36d9dcf1ea086d37874f9">[詳解]</a><br /></td></tr>
+<tr class="separator:a79e213a817d36d9dcf1ea086d37874f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a545cbe9d1de6959479d79c9ec73a581f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8c.html#a545cbe9d1de6959479d79c9ec73a581f">i2c_write_register</a> (int fd, uint8_t dev_addr, uint8_t reg_addr, uint8_t reg_data)</td></tr>
+<tr class="memdesc:a545cbe9d1de6959479d79c9ec73a581f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write Data to I2C Device Register  <a href="i2c_8c.html#a545cbe9d1de6959479d79c9ec73a581f">[詳解]</a><br /></td></tr>
+<tr class="separator:a545cbe9d1de6959479d79c9ec73a581f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>I2C Device Register Access Functions </p>
+<dl class="section author"><dt>著者</dt><dd>Keitetsu </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2016/09/05 </dd></dl>
+<dl class="section copyright"><dt>著作権所有</dt><dd>Copyright (c) 2016 Keitetsu </dd></dl>
+<dl class="section user"><dt>License:\n This software is released under the MIT License.</dt><dd></dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a2701d0b05bda5e1d1496019048afc37d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2701d0b05bda5e1d1496019048afc37d">&#9670;&nbsp;</a></span>i2c_close_bus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2c_close_bus </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close Function for I2C Bus </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>Device File for I2C Bus </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2c_8c_a2701d0b05bda5e1d1496019048afc37d_icgraph.png" border="0" usemap="#ai2c_8c_a2701d0b05bda5e1d1496019048afc37d_icgraph" alt=""/></div>
+<map name="ai2c_8c_a2701d0b05bda5e1d1496019048afc37d_icgraph" id="ai2c_8c_a2701d0b05bda5e1d1496019048afc37d_icgraph">
+<area shape="rect" title="Close Function for I2C Bus" alt="" coords="259,5,364,32"/>
+<area shape="rect" href="_d_s3231_8h.html#ab685211616434680b2e7556cc5d0b6d8" title="Close Function for DS3231" alt="" coords="104,5,211,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main Function" alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6d06736ee4058355cd193d0ebb683652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d06736ee4058355cd193d0ebb683652">&#9670;&nbsp;</a></span>i2c_open_bus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int i2c_open_bus </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>i2c_bus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open Function for I2C Bus </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i2c_bus</td><td>Device File for I2C Bus </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>File Descriptor </dd></dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2c_8c_a6d06736ee4058355cd193d0ebb683652_icgraph.png" border="0" usemap="#ai2c_8c_a6d06736ee4058355cd193d0ebb683652_icgraph" alt=""/></div>
+<map name="ai2c_8c_a6d06736ee4058355cd193d0ebb683652_icgraph" id="ai2c_8c_a6d06736ee4058355cd193d0ebb683652_icgraph">
+<area shape="rect" title="Open Function for I2C Bus" alt="" coords="255,5,357,32"/>
+<area shape="rect" href="_d_s3231_8h.html#a63938878c9e1447f057db7e0eb3213b3" title="Open Function for DS3231" alt="" coords="104,5,207,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main Function" alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a79e213a817d36d9dcf1ea086d37874f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e213a817d36d9dcf1ea086d37874f9">&#9670;&nbsp;</a></span>i2c_read_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int i2c_read_register </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>reg_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>reg_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read Data from I2C Device Register </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>Device File for I2C Bus </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>I2C Device Address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg_addr</td><td>I2c Device Register Address </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">reg_data</td><td>Read Data from I2C Device Register </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2c_8c_a79e213a817d36d9dcf1ea086d37874f9_icgraph.png" border="0" usemap="#ai2c_8c_a79e213a817d36d9dcf1ea086d37874f9_icgraph" alt=""/></div>
+<map name="ai2c_8c_a79e213a817d36d9dcf1ea086d37874f9_icgraph" id="ai2c_8c_a79e213a817d36d9dcf1ea086d37874f9_icgraph">
+<area shape="rect" title="Read Data from I2C Device Register" alt="" coords="328,5,449,32"/>
+<area shape="rect" href="_d_s3231_8h.html#a950dbf14a25199f82eae97f66166a6a5" title="Read DS3231 Temperature Register" alt="" coords="104,5,280,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main Function" alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a545cbe9d1de6959479d79c9ec73a581f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a545cbe9d1de6959479d79c9ec73a581f">&#9670;&nbsp;</a></span>i2c_write_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int i2c_write_register </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>reg_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>reg_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write Data to I2C Device Register </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>Device File for I2C Bus </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>I2C Device Address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg_addr</td><td>I2c Device Register Address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg_data</td><td>Write Data for I2C Device Register </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4c25b4c2861b8c1e9e0cda0ff69bb2a5.html">i2c</a></li><li class="navelem"><a class="el" href="dir_69d7023b388520d09e96fd71ad10f01e.html">src</a></li><li class="navelem"><a class="el" href="i2c_8c.html">i2c.c</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

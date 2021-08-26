@@ -1,0 +1,8 @@
+<map id="DS3231/src" name="DS3231/src">
+<area shape="rect" id="node1" href="dir_312ec49dd6b02ede1f3dd7d00e968993.html" title="include" alt="" coords="27,148,99,196"/>
+<area shape="rect" id="node2" href="dir_c08fbc0c497b925089f7b64a42a16918.html" title="src" alt="" coords="27,52,99,100"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000002_000001.html" title="1" alt="" coords="67,122,75,137"/>
+<area shape="rect" id="node3" href="dir_4c25b4c2861b8c1e9e0cda0ff69bb2a5.html" title="i2c" alt="" coords="123,148,195,196"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000002_000003.html" title="1" alt="" coords="124,122,132,136"/>
+<area shape="rect" id="clust1" href="dir_f77cf2220eb7f9aa8c9c8430abe66524.html" title="DS3231" alt="" coords="16,16,109,207"/>
+</map>

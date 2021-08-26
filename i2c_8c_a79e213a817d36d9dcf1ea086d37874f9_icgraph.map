@@ -1,0 +1,5 @@
+<map id="i2c_read_register" name="i2c_read_register">
+<area shape="rect" id="node1" title="Read Data from I2C Device Register" alt="" coords="328,5,449,32"/>
+<area shape="rect" id="node2" href="$_d_s3231_8h.html#a950dbf14a25199f82eae97f66166a6a5" title="Read DS3231 Temperature Register" alt="" coords="104,5,280,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main Function" alt="" coords="5,5,56,32"/>
+</map>

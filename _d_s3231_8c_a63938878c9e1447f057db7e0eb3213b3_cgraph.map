@@ -1,0 +1,4 @@
+<map id="DS3231_open" name="DS3231_open">
+<area shape="rect" id="node1" title="Open Function for DS3231" alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node2" href="$i2c_8h.html#a6d06736ee4058355cd193d0ebb683652" title="Open Function for I2C Bus" alt="" coords="156,5,259,32"/>
+</map>

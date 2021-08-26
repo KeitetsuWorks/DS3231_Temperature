@@ -1,0 +1,4 @@
+<map id="DS3231_read_temperature" name="DS3231_read_temperature">
+<area shape="rect" id="node1" title="Read DS3231 Temperature Register" alt="" coords="5,5,181,32"/>
+<area shape="rect" id="node2" href="$i2c_8h.html#a79e213a817d36d9dcf1ea086d37874f9" title="Read Data from I2C Device Register" alt="" coords="229,5,351,32"/>
+</map>

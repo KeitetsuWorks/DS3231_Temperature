@@ -1,0 +1,5 @@
+<map id="DS3231/include/DS3231.h" name="DS3231/include/DS3231.h">
+<area shape="rect" id="node1" title="DS3231 I2C RTC Control Functions" alt="" coords="65,5,238,32"/>
+<area shape="rect" id="node2" href="$_d_s3231_8c.html" title="DS3231 I2C RTC Control Functions" alt="" coords="5,80,156,107"/>
+<area shape="rect" id="node3" href="$main_8c.html" title="Main Function for DS3231 Temperature Register Access" alt="" coords="181,80,263,107"/>
+</map>

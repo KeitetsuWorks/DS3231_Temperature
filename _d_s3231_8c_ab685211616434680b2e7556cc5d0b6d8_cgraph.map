@@ -1,0 +1,4 @@
+<map id="DS3231_close" name="DS3231_close">
+<area shape="rect" id="node1" title="Close Function for DS3231" alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$i2c_8h.html#a2701d0b05bda5e1d1496019048afc37d" title="Close Function for I2C Bus" alt="" coords="160,5,265,32"/>
+</map>

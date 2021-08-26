@@ -1,0 +1,14 @@
+<map id="i2c/src/i2c.c" name="i2c/src/i2c.c">
+<area shape="rect" id="node1" title="I2C Device Register Access Functions" alt="" coords="435,5,527,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,65,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="89,80,152,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="177,80,241,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="265,80,331,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="356,80,413,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="437,80,524,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="548,80,627,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="651,80,731,107"/>
+<area shape="rect" id="node10" title=" " alt="" coords="756,80,835,107"/>
+<area shape="rect" id="node11" title=" " alt="" coords="859,80,963,107"/>
+<area shape="rect" id="node12" href="$i2c_8h.html" title="I2C Device Register Access Functions" alt="" coords="988,80,1037,107"/>
+</map>

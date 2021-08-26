@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DS3231 Temperature Register Access Program: DS3231/include/DS3231.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DS3231 Temperature Register Access Program
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_d_s3231_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">DS3231.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>DS3231 I2C RTC Control Functions  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_d_s3231_8h__dep__incl.png" border="0" usemap="#a_d_s3231_2include_2_d_s3231_8hdep" alt=""/></div>
+<map name="a_d_s3231_2include_2_d_s3231_8hdep" id="a_d_s3231_2include_2_d_s3231_8hdep">
+<area shape="rect" title="DS3231 I2C RTC Control Functions" alt="" coords="65,5,238,32"/>
+<area shape="rect" href="_d_s3231_8c.html" title="DS3231 I2C RTC Control Functions" alt="" coords="5,80,156,107"/>
+<area shape="rect" href="main_8c.html" title="Main Function for DS3231 Temperature Register Access" alt="" coords="181,80,263,107"/>
+</map>
+</div>
+</div>
+<p><a href="_d_s3231_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Device Address</div></td></tr>
+<tr class="memitem:a807ca712a5ee10a56cf420c420c42524"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_d_s3231_8h.html#a807ca712a5ee10a56cf420c420c42524">DS3231_ADDR</a>&#160;&#160;&#160;0x68</td></tr>
+<tr class="separator:a807ca712a5ee10a56cf420c420c42524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Register Address Map</div></td></tr>
+<tr class="memitem:a702f90628f57f4fae86f4958a9a8ada3"><td class="memItemLeft" align="right" valign="top"><a id="a702f90628f57f4fae86f4958a9a8ada3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_TIME</b>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:a702f90628f57f4fae86f4958a9a8ada3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae686654358c903a88f4f1b58a03a9b1e"><td class="memItemLeft" align="right" valign="top"><a id="ae686654358c903a88f4f1b58a03a9b1e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_ALARM1</b>&#160;&#160;&#160;0x07</td></tr>
+<tr class="separator:ae686654358c903a88f4f1b58a03a9b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaddd22823b5cb6dfe38bf2293c04eaa2"><td class="memItemLeft" align="right" valign="top"><a id="aaddd22823b5cb6dfe38bf2293c04eaa2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_ALARM2</b>&#160;&#160;&#160;0x0B</td></tr>
+<tr class="separator:aaddd22823b5cb6dfe38bf2293c04eaa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9d0b2aca525ae194ad728b90fdbad98"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_d_s3231_8h.html#aa9d0b2aca525ae194ad728b90fdbad98">DS3231_CONTROL</a>&#160;&#160;&#160;0x0E</td></tr>
+<tr class="separator:aa9d0b2aca525ae194ad728b90fdbad98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca91fa3eb0f763832c213511e5c6c2d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_d_s3231_8h.html#aca91fa3eb0f763832c213511e5c6c2d0">DS3231_CONTROL_STATUS</a>&#160;&#160;&#160;0x0F</td></tr>
+<tr class="separator:aca91fa3eb0f763832c213511e5c6c2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeef28eb1c04bfe0a67ae4948bcb45bd8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_d_s3231_8h.html#aeef28eb1c04bfe0a67ae4948bcb45bd8">DS3231_AGING</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="separator:aeef28eb1c04bfe0a67ae4948bcb45bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e50dac4bfb773ff2f505edbb47a116d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_d_s3231_8h.html#a6e50dac4bfb773ff2f505edbb47a116d">DS3231_TEMPERATURE_MSB</a>&#160;&#160;&#160;0x11</td></tr>
+<tr class="separator:a6e50dac4bfb773ff2f505edbb47a116d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a4b82e727134f37d5d0073eacc0b541"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_d_s3231_8h.html#a1a4b82e727134f37d5d0073eacc0b541">DS3231_TEMPERATURE_LSB</a>&#160;&#160;&#160;0x12</td></tr>
+<tr class="separator:a1a4b82e727134f37d5d0073eacc0b541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Register Address Offset</div></td></tr>
+<tr class="memitem:aece7225f546d9f3c7a2f85f12a6c47d1"><td class="memItemLeft" align="right" valign="top"><a id="aece7225f546d9f3c7a2f85f12a6c47d1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_SECONDS</b>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:aece7225f546d9f3c7a2f85f12a6c47d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cb6bacddf9ec04be65be60cf8289b8c"><td class="memItemLeft" align="right" valign="top"><a id="a9cb6bacddf9ec04be65be60cf8289b8c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_MINUTES</b>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:a9cb6bacddf9ec04be65be60cf8289b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a30100ab2c35e798a71690d9403a67"><td class="memItemLeft" align="right" valign="top"><a id="a46a30100ab2c35e798a71690d9403a67"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_HOURS</b>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:a46a30100ab2c35e798a71690d9403a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a4b924ec75b200b81a286199f885103"><td class="memItemLeft" align="right" valign="top"><a id="a8a4b924ec75b200b81a286199f885103"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_DAY</b>&#160;&#160;&#160;0x03</td></tr>
+<tr class="separator:a8a4b924ec75b200b81a286199f885103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d9fe82ca89628a742120f767cd196e"><td class="memItemLeft" align="right" valign="top"><a id="a52d9fe82ca89628a742120f767cd196e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_DATE</b>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:a52d9fe82ca89628a742120f767cd196e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a2f718d3519e257c563725a3e995b3"><td class="memItemLeft" align="right" valign="top"><a id="a36a2f718d3519e257c563725a3e995b3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_MONTH_CENTURY</b>&#160;&#160;&#160;0x05</td></tr>
+<tr class="separator:a36a2f718d3519e257c563725a3e995b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738a30de9279c7f102f8d39ab7f0a9eb"><td class="memItemLeft" align="right" valign="top"><a id="a738a30de9279c7f102f8d39ab7f0a9eb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_YEAR</b>&#160;&#160;&#160;0x06</td></tr>
+<tr class="separator:a738a30de9279c7f102f8d39ab7f0a9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28623610e464c880d467bcb74dc3da09"><td class="memItemLeft" align="right" valign="top"><a id="a28623610e464c880d467bcb74dc3da09"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_ALARM1_SECONDS</b>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:a28623610e464c880d467bcb74dc3da09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abebd0f733e3547e25d06ecec0801509d"><td class="memItemLeft" align="right" valign="top"><a id="abebd0f733e3547e25d06ecec0801509d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_ALARM1_MINUTES</b>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:abebd0f733e3547e25d06ecec0801509d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac053d1bf9b9856663c38a6bf1cf51db9"><td class="memItemLeft" align="right" valign="top"><a id="ac053d1bf9b9856663c38a6bf1cf51db9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_ALARM1_HOURS</b>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:ac053d1bf9b9856663c38a6bf1cf51db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b17008ec2f94949278e4152b0457eb"><td class="memItemLeft" align="right" valign="top"><a id="a97b17008ec2f94949278e4152b0457eb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_ALARM1_DAY_DATE</b>&#160;&#160;&#160;0x03</td></tr>
+<tr class="separator:a97b17008ec2f94949278e4152b0457eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2c95c451ca42df529ce031a25bd6ac"><td class="memItemLeft" align="right" valign="top"><a id="a7b2c95c451ca42df529ce031a25bd6ac"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_ALARM2_MINUTES</b>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:a7b2c95c451ca42df529ce031a25bd6ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839f8199452da3c6a769ad178caa9dbd"><td class="memItemLeft" align="right" valign="top"><a id="a839f8199452da3c6a769ad178caa9dbd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_ALARM2_HOURS</b>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:a839f8199452da3c6a769ad178caa9dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f54d9503b10ac5bf5a1e3006f1a3d89"><td class="memItemLeft" align="right" valign="top"><a id="a8f54d9503b10ac5bf5a1e3006f1a3d89"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_ALARM2_DAY_DATE</b>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:a8f54d9503b10ac5bf5a1e3006f1a3d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Register Bit Mask</div></td></tr>
+<tr class="memitem:aa60ebf399c1a02cb10fe8499b88d3730"><td class="memItemLeft" align="right" valign="top"><a id="aa60ebf399c1a02cb10fe8499b88d3730"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_10SECONDS</b>&#160;&#160;&#160;0x70</td></tr>
+<tr class="separator:aa60ebf399c1a02cb10fe8499b88d3730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7cc13da8933468b92861b5597018544"><td class="memItemLeft" align="right" valign="top"><a id="ab7cc13da8933468b92861b5597018544"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_SECONDS</b>&#160;&#160;&#160;0x0F</td></tr>
+<tr class="separator:ab7cc13da8933468b92861b5597018544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e46573b5ccf3eafee6f59fe774e7c20"><td class="memItemLeft" align="right" valign="top"><a id="a6e46573b5ccf3eafee6f59fe774e7c20"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_10MINUTES</b>&#160;&#160;&#160;0x70</td></tr>
+<tr class="separator:a6e46573b5ccf3eafee6f59fe774e7c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672ebfcf3661783231ea04c2dcce5b72"><td class="memItemLeft" align="right" valign="top"><a id="a672ebfcf3661783231ea04c2dcce5b72"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_MINUTES</b>&#160;&#160;&#160;0x0F</td></tr>
+<tr class="separator:a672ebfcf3661783231ea04c2dcce5b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d68db02276fc817b5c25d581dc234c"><td class="memItemLeft" align="right" valign="top"><a id="a06d68db02276fc817b5c25d581dc234c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_12_24</b>&#160;&#160;&#160;0x40</td></tr>
+<tr class="separator:a06d68db02276fc817b5c25d581dc234c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad820e8f2a5d9392bd0a28c00adef8824"><td class="memItemLeft" align="right" valign="top"><a id="ad820e8f2a5d9392bd0a28c00adef8824"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_AM_PM</b>&#160;&#160;&#160;0x20</td></tr>
+<tr class="separator:ad820e8f2a5d9392bd0a28c00adef8824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52215cd77149292dcbff562ca9c45d96"><td class="memItemLeft" align="right" valign="top"><a id="a52215cd77149292dcbff562ca9c45d96"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_20HOUR</b>&#160;&#160;&#160;0x20</td></tr>
+<tr class="separator:a52215cd77149292dcbff562ca9c45d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad416a6a306fa81ced155b4deb8cf2e1b"><td class="memItemLeft" align="right" valign="top"><a id="ad416a6a306fa81ced155b4deb8cf2e1b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_10HOUR</b>&#160;&#160;&#160;0x10</td></tr>
+<tr class="separator:ad416a6a306fa81ced155b4deb8cf2e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2beac9df6c135edac6623c02402b34a8"><td class="memItemLeft" align="right" valign="top"><a id="a2beac9df6c135edac6623c02402b34a8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_HOUR</b>&#160;&#160;&#160;0x0F</td></tr>
+<tr class="separator:a2beac9df6c135edac6623c02402b34a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343a74d5780b5fd0737165853d061640"><td class="memItemLeft" align="right" valign="top"><a id="a343a74d5780b5fd0737165853d061640"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_DAY</b>&#160;&#160;&#160;0x07</td></tr>
+<tr class="separator:a343a74d5780b5fd0737165853d061640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18fc59b9d5992b31ccec2f30ecfa1f1d"><td class="memItemLeft" align="right" valign="top"><a id="a18fc59b9d5992b31ccec2f30ecfa1f1d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_10DATE</b>&#160;&#160;&#160;0x30</td></tr>
+<tr class="separator:a18fc59b9d5992b31ccec2f30ecfa1f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f81ef5327123d76d76fa2dbc869fe9"><td class="memItemLeft" align="right" valign="top"><a id="a48f81ef5327123d76d76fa2dbc869fe9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_DATE</b>&#160;&#160;&#160;0x0F</td></tr>
+<tr class="separator:a48f81ef5327123d76d76fa2dbc869fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb826ab1002bb19c80060504db33333"><td class="memItemLeft" align="right" valign="top"><a id="a1eb826ab1002bb19c80060504db33333"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_CENTURY</b>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:a1eb826ab1002bb19c80060504db33333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae9319b7a0793e5e85ef51d438360435"><td class="memItemLeft" align="right" valign="top"><a id="aae9319b7a0793e5e85ef51d438360435"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_10YEAR</b>&#160;&#160;&#160;0xF0</td></tr>
+<tr class="separator:aae9319b7a0793e5e85ef51d438360435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05b0076e4cc5121b18fb7dd2f44e7ae"><td class="memItemLeft" align="right" valign="top"><a id="ab05b0076e4cc5121b18fb7dd2f44e7ae"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_YEAR</b>&#160;&#160;&#160;0x0F</td></tr>
+<tr class="separator:ab05b0076e4cc5121b18fb7dd2f44e7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c00ef5e624493076201d080defad3d"><td class="memItemLeft" align="right" valign="top"><a id="a64c00ef5e624493076201d080defad3d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_ALARM_MASK</b>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:a64c00ef5e624493076201d080defad3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5bb1279fa341eaebcd1f96f278a1463"><td class="memItemLeft" align="right" valign="top"><a id="ae5bb1279fa341eaebcd1f96f278a1463"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_ALARM_DY_DT</b>&#160;&#160;&#160;0x40</td></tr>
+<tr class="separator:ae5bb1279fa341eaebcd1f96f278a1463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a244863eaf6039e2342597b4c1a89b2c5"><td class="memItemLeft" align="right" valign="top"><a id="a244863eaf6039e2342597b4c1a89b2c5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_EOSC</b>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:a244863eaf6039e2342597b4c1a89b2c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60cee960630b99e36fda046f4d991360"><td class="memItemLeft" align="right" valign="top"><a id="a60cee960630b99e36fda046f4d991360"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_BBSQW</b>&#160;&#160;&#160;0x40</td></tr>
+<tr class="separator:a60cee960630b99e36fda046f4d991360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8330326242ab75699595966971b87bf8"><td class="memItemLeft" align="right" valign="top"><a id="a8330326242ab75699595966971b87bf8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_CONV</b>&#160;&#160;&#160;0x20</td></tr>
+<tr class="separator:a8330326242ab75699595966971b87bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd966d249fa609d34adb06cec94038bd"><td class="memItemLeft" align="right" valign="top"><a id="abd966d249fa609d34adb06cec94038bd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_RS2</b>&#160;&#160;&#160;0x10</td></tr>
+<tr class="separator:abd966d249fa609d34adb06cec94038bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae21bbf6bf405365108435cd5c3fbb63e"><td class="memItemLeft" align="right" valign="top"><a id="ae21bbf6bf405365108435cd5c3fbb63e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_RS1</b>&#160;&#160;&#160;0x08</td></tr>
+<tr class="separator:ae21bbf6bf405365108435cd5c3fbb63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f9ec760cd5367998bac5ba1dbdf831"><td class="memItemLeft" align="right" valign="top"><a id="a42f9ec760cd5367998bac5ba1dbdf831"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_INTCN</b>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:a42f9ec760cd5367998bac5ba1dbdf831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26094915ba65649e7541cdb775151abb"><td class="memItemLeft" align="right" valign="top"><a id="a26094915ba65649e7541cdb775151abb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_A2IE</b>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:a26094915ba65649e7541cdb775151abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728fc1d67323e8f6e2c84441e2c0e1af"><td class="memItemLeft" align="right" valign="top"><a id="a728fc1d67323e8f6e2c84441e2c0e1af"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_A1IE</b>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:a728fc1d67323e8f6e2c84441e2c0e1af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46f6006cf1e3e0fdfcbd0d809bbfe305"><td class="memItemLeft" align="right" valign="top"><a id="a46f6006cf1e3e0fdfcbd0d809bbfe305"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_OSF</b>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:a46f6006cf1e3e0fdfcbd0d809bbfe305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a199c9d813f4e5b26a88e8987dc0a05ff"><td class="memItemLeft" align="right" valign="top"><a id="a199c9d813f4e5b26a88e8987dc0a05ff"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_EN32KHZ</b>&#160;&#160;&#160;0x08</td></tr>
+<tr class="separator:a199c9d813f4e5b26a88e8987dc0a05ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf39e74eebfc26d5ec8ae7832d01d24"><td class="memItemLeft" align="right" valign="top"><a id="afaf39e74eebfc26d5ec8ae7832d01d24"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_BSY</b>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:afaf39e74eebfc26d5ec8ae7832d01d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab81d86317d287c57745529ad76eccc94"><td class="memItemLeft" align="right" valign="top"><a id="ab81d86317d287c57745529ad76eccc94"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_A2F</b>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:ab81d86317d287c57745529ad76eccc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3de3f78688c58912042ef9333469b7ca"><td class="memItemLeft" align="right" valign="top"><a id="a3de3f78688c58912042ef9333469b7ca"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_A1F</b>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:a3de3f78688c58912042ef9333469b7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ba70f855881a3fec92f78794ac6846"><td class="memItemLeft" align="right" valign="top"><a id="a78ba70f855881a3fec92f78794ac6846"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_AGING_SIGN</b>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:a78ba70f855881a3fec92f78794ac6846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ba86f7149d151dcd828162484166c5"><td class="memItemLeft" align="right" valign="top"><a id="aa4ba86f7149d151dcd828162484166c5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_AGING_DATA</b>&#160;&#160;&#160;0x7F</td></tr>
+<tr class="separator:aa4ba86f7149d151dcd828162484166c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad99690bebe4b2f921c1073f213da7a8b"><td class="memItemLeft" align="right" valign="top"><a id="ad99690bebe4b2f921c1073f213da7a8b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_TEMPERATURE_SIGN</b>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:ad99690bebe4b2f921c1073f213da7a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd1733dc48e7cbb649f090f27622f55c"><td class="memItemLeft" align="right" valign="top"><a id="abd1733dc48e7cbb649f090f27622f55c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_TEMPERATURE_MSB</b>&#160;&#160;&#160;0x7F</td></tr>
+<tr class="separator:abd1733dc48e7cbb649f090f27622f55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20d1bd11ea8e8db1fc1fd19c90f40be0"><td class="memItemLeft" align="right" valign="top"><a id="a20d1bd11ea8e8db1fc1fd19c90f40be0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_BIT_TEMPERATURE_LSB</b>&#160;&#160;&#160;0xC0</td></tr>
+<tr class="separator:a20d1bd11ea8e8db1fc1fd19c90f40be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a63938878c9e1447f057db7e0eb3213b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_d_s3231_8h.html#a63938878c9e1447f057db7e0eb3213b3">DS3231_open</a> (char *i2c_bus)</td></tr>
+<tr class="memdesc:a63938878c9e1447f057db7e0eb3213b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open Function for DS3231  <a href="_d_s3231_8h.html#a63938878c9e1447f057db7e0eb3213b3">[詳解]</a><br /></td></tr>
+<tr class="separator:a63938878c9e1447f057db7e0eb3213b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab685211616434680b2e7556cc5d0b6d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_d_s3231_8h.html#ab685211616434680b2e7556cc5d0b6d8">DS3231_close</a> (int fd)</td></tr>
+<tr class="memdesc:ab685211616434680b2e7556cc5d0b6d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close Function for DS3231  <a href="_d_s3231_8h.html#ab685211616434680b2e7556cc5d0b6d8">[詳解]</a><br /></td></tr>
+<tr class="separator:ab685211616434680b2e7556cc5d0b6d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a950dbf14a25199f82eae97f66166a6a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_d_s3231_8h.html#a950dbf14a25199f82eae97f66166a6a5">DS3231_read_temperature</a> (int fd, double *temperature)</td></tr>
+<tr class="memdesc:a950dbf14a25199f82eae97f66166a6a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read DS3231 Temperature Register  <a href="_d_s3231_8h.html#a950dbf14a25199f82eae97f66166a6a5">[詳解]</a><br /></td></tr>
+<tr class="separator:a950dbf14a25199f82eae97f66166a6a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>DS3231 I2C RTC Control Functions </p>
+<dl class="section author"><dt>著者</dt><dd>Keitetsu </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2016/09/05 </dd></dl>
+<dl class="section copyright"><dt>著作権所有</dt><dd>Copyright (c) 2016 Keitetsu </dd></dl>
+<dl class="section user"><dt>License:\n This software is released under the MIT License.</dt><dd></dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a807ca712a5ee10a56cf420c420c42524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a807ca712a5ee10a56cf420c420c42524">&#9670;&nbsp;</a></span>DS3231_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS3231_ADDR&#160;&#160;&#160;0x68</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>maxim integrated DS3231 </p>
+
+</div>
+</div>
+<a id="aeef28eb1c04bfe0a67ae4948bcb45bd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeef28eb1c04bfe0a67ae4948bcb45bd8">&#9670;&nbsp;</a></span>DS3231_AGING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS3231_AGING&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Aging Offset Register </p>
+
+</div>
+</div>
+<a id="aa9d0b2aca525ae194ad728b90fdbad98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9d0b2aca525ae194ad728b90fdbad98">&#9670;&nbsp;</a></span>DS3231_CONTROL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS3231_CONTROL&#160;&#160;&#160;0x0E</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Control Register </p>
+
+</div>
+</div>
+<a id="aca91fa3eb0f763832c213511e5c6c2d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca91fa3eb0f763832c213511e5c6c2d0">&#9670;&nbsp;</a></span>DS3231_CONTROL_STATUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS3231_CONTROL_STATUS&#160;&#160;&#160;0x0F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Status Register </p>
+
+</div>
+</div>
+<a id="a1a4b82e727134f37d5d0073eacc0b541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a4b82e727134f37d5d0073eacc0b541">&#9670;&nbsp;</a></span>DS3231_TEMPERATURE_LSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS3231_TEMPERATURE_LSB&#160;&#160;&#160;0x12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Temperature Register (Lower Byte) </p>
+
+</div>
+</div>
+<a id="a6e50dac4bfb773ff2f505edbb47a116d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e50dac4bfb773ff2f505edbb47a116d">&#9670;&nbsp;</a></span>DS3231_TEMPERATURE_MSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS3231_TEMPERATURE_MSB&#160;&#160;&#160;0x11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Temperature Register (Upper Byte) </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ab685211616434680b2e7556cc5d0b6d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab685211616434680b2e7556cc5d0b6d8">&#9670;&nbsp;</a></span>DS3231_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DS3231_close </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close Function for DS3231 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>Device File for I2C Bus </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_d_s3231_8h_ab685211616434680b2e7556cc5d0b6d8_cgraph.png" border="0" usemap="#a_d_s3231_8h_ab685211616434680b2e7556cc5d0b6d8_cgraph" alt=""/></div>
+<map name="a_d_s3231_8h_ab685211616434680b2e7556cc5d0b6d8_cgraph" id="a_d_s3231_8h_ab685211616434680b2e7556cc5d0b6d8_cgraph">
+<area shape="rect" title="Close Function for DS3231" alt="" coords="5,5,112,32"/>
+<area shape="rect" href="i2c_8h.html#a2701d0b05bda5e1d1496019048afc37d" title="Close Function for I2C Bus" alt="" coords="160,5,265,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_d_s3231_8h_ab685211616434680b2e7556cc5d0b6d8_icgraph.png" border="0" usemap="#a_d_s3231_8h_ab685211616434680b2e7556cc5d0b6d8_icgraph" alt=""/></div>
+<map name="a_d_s3231_8h_ab685211616434680b2e7556cc5d0b6d8_icgraph" id="a_d_s3231_8h_ab685211616434680b2e7556cc5d0b6d8_icgraph">
+<area shape="rect" title="Close Function for DS3231" alt="" coords="104,5,211,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main Function" alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a63938878c9e1447f057db7e0eb3213b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63938878c9e1447f057db7e0eb3213b3">&#9670;&nbsp;</a></span>DS3231_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DS3231_open </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>i2c_bus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open Function for DS3231 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i2c_bus</td><td>Device File for I2C Bus </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>File Descriptor </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_d_s3231_8h_a63938878c9e1447f057db7e0eb3213b3_cgraph.png" border="0" usemap="#a_d_s3231_8h_a63938878c9e1447f057db7e0eb3213b3_cgraph" alt=""/></div>
+<map name="a_d_s3231_8h_a63938878c9e1447f057db7e0eb3213b3_cgraph" id="a_d_s3231_8h_a63938878c9e1447f057db7e0eb3213b3_cgraph">
+<area shape="rect" title="Open Function for DS3231" alt="" coords="5,5,108,32"/>
+<area shape="rect" href="i2c_8h.html#a6d06736ee4058355cd193d0ebb683652" title="Open Function for I2C Bus" alt="" coords="156,5,259,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_d_s3231_8h_a63938878c9e1447f057db7e0eb3213b3_icgraph.png" border="0" usemap="#a_d_s3231_8h_a63938878c9e1447f057db7e0eb3213b3_icgraph" alt=""/></div>
+<map name="a_d_s3231_8h_a63938878c9e1447f057db7e0eb3213b3_icgraph" id="a_d_s3231_8h_a63938878c9e1447f057db7e0eb3213b3_icgraph">
+<area shape="rect" title="Open Function for DS3231" alt="" coords="104,5,207,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main Function" alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a950dbf14a25199f82eae97f66166a6a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a950dbf14a25199f82eae97f66166a6a5">&#9670;&nbsp;</a></span>DS3231_read_temperature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DS3231_read_temperature </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>temperature</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read DS3231 Temperature Register </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>Device File for I2C Bus </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">temperature</td><td>Celsius Temperature </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success </td></tr>
+    <tr><td class="paramname">1</td><td>Failure </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_d_s3231_8h_a950dbf14a25199f82eae97f66166a6a5_cgraph.png" border="0" usemap="#a_d_s3231_8h_a950dbf14a25199f82eae97f66166a6a5_cgraph" alt=""/></div>
+<map name="a_d_s3231_8h_a950dbf14a25199f82eae97f66166a6a5_cgraph" id="a_d_s3231_8h_a950dbf14a25199f82eae97f66166a6a5_cgraph">
+<area shape="rect" title="Read DS3231 Temperature Register" alt="" coords="5,5,181,32"/>
+<area shape="rect" href="i2c_8h.html#a79e213a817d36d9dcf1ea086d37874f9" title="Read Data from I2C Device Register" alt="" coords="229,5,351,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_d_s3231_8h_a950dbf14a25199f82eae97f66166a6a5_icgraph.png" border="0" usemap="#a_d_s3231_8h_a950dbf14a25199f82eae97f66166a6a5_icgraph" alt=""/></div>
+<map name="a_d_s3231_8h_a950dbf14a25199f82eae97f66166a6a5_icgraph" id="a_d_s3231_8h_a950dbf14a25199f82eae97f66166a6a5_icgraph">
+<area shape="rect" title="Read DS3231 Temperature Register" alt="" coords="104,5,280,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main Function" alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_f77cf2220eb7f9aa8c9c8430abe66524.html">DS3231</a></li><li class="navelem"><a class="el" href="dir_312ec49dd6b02ede1f3dd7d00e968993.html">include</a></li><li class="navelem"><a class="el" href="_d_s3231_8h.html">DS3231.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

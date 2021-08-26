@@ -1,0 +1,9 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main Function" alt="" coords="5,56,56,83"/>
+<area shape="rect" id="node2" href="$_d_s3231_8h.html#ab685211616434680b2e7556cc5d0b6d8" title="Close Function for DS3231" alt="" coords="139,5,245,32"/>
+<area shape="rect" id="node4" href="$_d_s3231_8h.html#a63938878c9e1447f057db7e0eb3213b3" title="Open Function for DS3231" alt="" coords="141,56,243,83"/>
+<area shape="rect" id="node6" href="$_d_s3231_8h.html#a950dbf14a25199f82eae97f66166a6a5" title="Read DS3231 Temperature Register" alt="" coords="104,107,280,133"/>
+<area shape="rect" id="node3" href="$i2c_8h.html#a2701d0b05bda5e1d1496019048afc37d" title="Close Function for I2C Bus" alt="" coords="336,5,441,32"/>
+<area shape="rect" id="node5" href="$i2c_8h.html#a6d06736ee4058355cd193d0ebb683652" title="Open Function for I2C Bus" alt="" coords="337,56,440,83"/>
+<area shape="rect" id="node7" href="$i2c_8h.html#a79e213a817d36d9dcf1ea086d37874f9" title="Read Data from I2C Device Register" alt="" coords="328,107,449,133"/>
+</map>
